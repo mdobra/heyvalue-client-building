@@ -182,6 +182,10 @@ echo "* copy libp11.dll"
 start "copy libp11.dll" /D "%MY_COLLECT_PATH%/" /B /wait cp -af "%CRAFT_PATH%/bin/libp11.dll" "%MY_COLLECT_PATH%/"
 if %ERRORLEVEL% neq 0 goto
 
+echo "* copy kdsingleapplication-qt6.dll"
+start "copy kdsingleapplication-qt6.dll" /D "%MY_COLLECT_PATH%/" /B /wait cp -af "%CRAFT_PATH%/bin/kdsingleapplication-qt6.dll" "%MY_COLLECT_PATH%/"
+if %ERRORLEVEL% neq 0 goto
+
 Rem zlib
 echo "* copy zlib1%DLL_SUFFIX%.dll."
 start "copy zlib1%DLL_SUFFIX%.dll" /D "%MY_COLLECT_PATH%/" /B /wait cp -af "%CRAFT_PATH%/bin/zlib1%DLL_SUFFIX%.dll" "%MY_COLLECT_PATH%/"
